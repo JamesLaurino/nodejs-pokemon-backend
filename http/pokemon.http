@@ -1,0 +1,35 @@
+### GET request to example server
+GET http://localhost:3001/pokemons
+
+### GET request to example server
+GET http://localhost:3001/pokemons/1
+
+### GET Name
+GET http://localhost:3001/pokemons/name?name_like=Sal
+
+### DELETE Pokemon
+DELETE http://localhost:3001/pokemons/1
+
+### POST POKEMON
+POST http://localhost:3001/pokemons
+Content-Type: application/json
+
+{
+  "name": "Chenipan",
+  "hp": 16,
+  "cp": 16,
+  "picture": "https://assets.pokemon.com/assets/cms2/img/pokedex/detail/010.png",
+  "type": "Plante"
+}
+
+### UPDATE POKEMON
+PUT http://localhost:3001/pokemons/13
+Content-Type: application/json
+
+{
+  "name": "Chenipan",
+  "hp": 55,
+  "cp": 55,
+  "picture": "https://assets.pokemon.com/assets/cms2/img/pokedex/detail/010.png",
+  "type": "Plante"
+}

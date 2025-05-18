@@ -1,0 +1,8 @@
+### Connexion
+POST http://localhost:3001/client
+Content-Type: application/json
+
+{
+  "name": "user",
+  "password": "4321"
+}
