@@ -4,7 +4,6 @@ const { Op } = require('sequelize');
 module.exports = (app) => {
     app.get('/pokemons/name', (req, res) => {
 
-        console.log(req)
         const nameLike = req.query.name_like;
         Pokemon.findAll({
             where: {

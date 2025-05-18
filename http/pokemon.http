@@ -19,7 +19,7 @@ Content-Type: application/json
   "hp": 16,
   "cp": 16,
   "picture": "https://assets.pokemon.com/assets/cms2/img/pokedex/detail/010.png",
-  "type": "Plante"
+  "type": "Plante,Eau"
 }
 
 ### UPDATE POKEMON
