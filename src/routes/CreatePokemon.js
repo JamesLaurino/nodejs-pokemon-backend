@@ -1,8 +1,9 @@
 const { Pokemon } = require('../db/sequelize')
 const { ValidationError, UniqueConstraintError } = require('sequelize')
+const auth = require('../auth/auth')
 
 module.exports = (app) => {
-    app.post('/pokemons', (req, res) => {
+    app.post('/pokemons', auth, (req, res) => {
         Pokemon.create(req.body)
             .then(pokemon => {
                 res.json(pokemon)

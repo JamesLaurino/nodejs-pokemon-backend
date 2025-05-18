@@ -1,8 +1,9 @@
 const { Pokemon } = require('../db/sequelize')
 const { ValidationError, UniqueConstraintError } = require('sequelize')
+const auth = require('../auth/auth')
 
 module.exports = (app) => {
-    app.put('/pokemons/:id', (req, res) => {
+    app.put('/pokemons/:id', auth, (req, res) => {
         const id = req.params.id
         Pokemon.update(req.body, {
             where: { id: id }
@@ -23,7 +24,7 @@ module.exports = (app) => {
                     return res.status(400).json({ message: error.message, data: error });
                 }
                 if(error instanceof UniqueConstraintError) {
-                    return res.status(400).json({ message: 'error.message', data: error });
+                    return res.status(400).json({ message: error.message, data: error });
                 }
                 const message = `Le pokémon n'a pas pu être modifié. Réessayez dans quelques instants.`
                 res.status(500).json({ message, data: error })

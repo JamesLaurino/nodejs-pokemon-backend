@@ -3,6 +3,15 @@ POST http://localhost:3001/client
 Content-Type: application/json
 
 {
-  "name": "user",
-  "password": "4321"
+  "name": "admin",
+  "password": "1234"
 }
+
+### GET all clients
+GET http://localhost:3001/clients
+Content-Type: application/json
+Authorization: Bearer
+
+### GET all clients
+GET http://localhost:3001/clients
+Content-Type: application/json

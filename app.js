@@ -16,16 +16,16 @@ app.use(cors());
 
 sequelize.initDb()
 
+require('./src/routes/Login')(app)
 require('./src/routes/FindAllPokemons')(app)
 require('./src/routes/FindPokemonByName')(app)
 require('./src/routes/FindPokemonById')(app)
 require('./src/routes/DeletePokemon')(app)
 require('./src/routes/CreatePokemon')(app)
 require('./src/routes/UpdatePokemon')(app)
-require('./src/routes/Login')(app)
 require('./src/routes/LangueEn')(app)
 require('./src/routes/LangueFr')(app)
-
+require('./src/routes/FindAllClient')(app)
 
 app.use(({res}) => {
     const message = 'Impossible de trouver la ressource demandée ! Vous pouvez essayer une autre URL.'
