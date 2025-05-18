@@ -13,12 +13,12 @@ module.exports = (app) => {
                 return Pokemon.destroy({ where: { id: pokemon.id } })
                     .then(_ => {
                         const message = `Le pokémon avec l'identifiant n°${pokemon.id} a bien été supprimé.`
-                        res.json(pokemon)
+                        res.json({ message:message })
                     })
             })
             .catch(error => {
                 const message = `Le pokémon n'a pas pu être supprimé. Réessayez dans quelques instants.`
-                res.status(500).json({ message, data: error })
+                res.status(500).json({ message:message, data: error })
             })
     })
 }
