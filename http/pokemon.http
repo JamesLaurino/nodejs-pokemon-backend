@@ -33,3 +33,6 @@ Content-Type: application/json
   "picture": "https://assets.pokemon.com/assets/cms2/img/pokedex/detail/010.png",
   "type": "Plante"
 }
+
+### GET pagination
+GET http://localhost:3001/page/1

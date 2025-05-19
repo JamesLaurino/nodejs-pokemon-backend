@@ -26,6 +26,7 @@ require('./src/routes/UpdatePokemon')(app)
 require('./src/routes/LangueEn')(app)
 require('./src/routes/LangueFr')(app)
 require('./src/routes/FindAllClient')(app)
+require('./src/routes/Pagination')(app)
 
 app.use(({res}) => {
     const message = 'Impossible de trouver la ressource demandée ! Vous pouvez essayer une autre URL.'
