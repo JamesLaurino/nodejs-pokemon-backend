@@ -5,7 +5,7 @@ dotenv.config({ path: path.resolve(__dirname, `.env.${process.env.NODE_ENV}`) })
 
 const express = require('express');
 const bodyParser = require('body-parser');
-const sequelize = require('./src/db/sequelize'); // après le chargement de dotenv
+const sequelize = require('./src/db/Sequelize'); // après le chargement de dotenv
 const cors = require('cors');
 const app = express();
 
